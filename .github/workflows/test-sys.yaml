@@ -316,7 +316,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Wasmer
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: artifacts
       - name: Run it
@@ -333,7 +333,7 @@ jobs:
     runs-on: macos-11
     steps:
       - name: Download Wasmer
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: artifacts
       - name: Run it
@@ -349,7 +349,7 @@ jobs:
   #  runs-on: windows-latest
   #  steps:
   #    - name: Download Wasmer
-  #      uses: actions/download-artifact@v2
+  #      uses: actions/download-artifact@v4.1.7
   #      with:
   #        path: artifacts
   #    - name: Run it
@@ -365,7 +365,7 @@ jobs:
     if: needs.setup.outputs.DOING_RELEASE == '1'
     steps:
       - name: Download the Artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: artifacts
       - name: Create Release
